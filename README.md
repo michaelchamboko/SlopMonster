@@ -88,6 +88,10 @@ writing. Review the result for changed facts and lost context before accepting i
 For Claude Code, copy this folder to `~/.claude/skills/slopmonster/` and invoke
 `/slopmonster`. For Codex or another agent, ask it to follow [SKILL.md](SKILL.md).
 
+## Optional editorial persona: Dr Eleanor Hayes
+
+For a more distinctive editorial tone, explicitly ask the agent to **use Dr Eleanor Hayes** and follow [her persona guide](references/dr-eleanor-hayes.md). The fictional persona provides an observant, mature, occasionally dry-witted writing direction, particularly suitable for evidence-led SaaS decision writing. It is **opt-in**: the default checker, five-category score and factual review remain unchanged. Her fictional credentials or personal history must never be presented as actual product-testing experience.
+
 ## What the checker flags
 
 The current score has five categories:

@@ -61,6 +61,10 @@ The checker can flag valid language. Review the actual match before editing it.
 Never hide ordinary prose in code formatting to raise the score. If a necessary
 phrase still triggers a rule, explain the remaining finding to the user.
 
+## Optional editorial persona: Dr Eleanor Hayes
+
+When the user specifically asks for Dr Eleanor Hayes or Eleanor's editorial voice, read [references/dr-eleanor-hayes.md](references/dr-eleanor-hayes.md) and apply it as a **style pass after meaning and evidence checks**. For evidence-led SaaS content, preserve conditional recommendations, source-bound claims, limitations, disclosures and practical buyer context. Never present her fictional background as actual testing credentials or authorship. Do not automatically apply this persona to unrelated documents.
+
 ## Step 3: Request a second editing pass
 
 Use a different model family from the one that wrote the draft. This provides a
