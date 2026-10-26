@@ -8,7 +8,12 @@ a script.
 
 The Python checker reports matches in five categories and gives the text a score
 out of 5. The editing workflow asks an AI agent to review the draft for its intended
-reader, revise it, and request another pass from a different model family.
+reader, revise it, and request another pass from a different model family. Every
+edit also applies the Dr Eleanor Hayes editorial discipline: preserve the
+author's meaning and voice while removing unnecessary explanation, unsupported
+conclusions and decorative detail. Story structure findings apply to fiction;
+their use as questions about redundancy and evidence in other formats is an
+editorial adaptation, not a tested way to identify AI writing.
 
 A score of 5/5 means the checker found no scored matches. You still need to review
 whether the text makes sense, supports its claims and gives the reader what they
@@ -88,9 +93,9 @@ writing. Review the result for changed facts and lost context before accepting i
 For Claude Code, copy this folder to `~/.claude/skills/slopmonster/` and invoke
 `/slopmonster`. For Codex or another agent, ask it to follow [SKILL.md](SKILL.md).
 
-## Optional editorial persona: Dr Eleanor Hayes
+## Editorial approach: Dr Eleanor Hayes
 
-For a more distinctive editorial tone, explicitly ask the agent to **use Dr Eleanor Hayes** and follow [her persona guide](references/dr-eleanor-hayes.md). The fictional persona provides an observant, mature, occasionally dry-witted writing direction, particularly suitable for evidence-led SaaS decision writing. It is **opt-in**: the default checker, five-category score and factual review remain unchanged. Her fictional credentials or personal history must never be presented as actual product-testing experience.
+Every SlopMonster edit uses [Dr Eleanor Hayes's editorial discipline](references/dr-eleanor-hayes.md), informed by the narrative findings summarized in [the StoryScope review](references/storyscope-findings.md). This is a review method, not a required surface voice: preserve the author's register and intended meaning, with evidence suited to the audience. Apply narrative-structure questions only to fiction; use the related checks for redundancy and unsupported claims as editorial judgment in other formats, not as validated AI-writing signals. Do not add a character, subplot, flashback, metaphor, joke or unconventional ending to make prose seem human. The persona is fictional; never present its background as real expertise or product testing.
 
 ## What the checker flags
 

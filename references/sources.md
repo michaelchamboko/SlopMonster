@@ -44,3 +44,14 @@ CLI. It uses that CLI's configured model and does not pin a model version.
 This repository does not establish that a second model will produce a better
 edit. Compare the output with the draft for changes in meaning and run the checker
 again. The workflow makes no claim to prove human authorship or bypass AI detectors.
+
+## Narrative research
+
+Russell, Jenna, Rishanth Rajendhran, Chau Minh Pham, Mohit Iyyer and John Wieting.
+[“StoryScope: Investigating Idiosyncrasies in AI Fiction”](https://arxiv.org/abs/2604.03136),
+arXiv:2604.03136v6, 10 August 2026. The paper studies narrative features in fiction
+from five named model versions and human authors. Its corpus-level findings inform
+the editorial questions in [the StoryScope review](storyscope-findings.md); they do
+not establish general AI-writing signs or classify an individual draft. The paper
+is released under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+The review paraphrases findings and supplies original examples with attribution.

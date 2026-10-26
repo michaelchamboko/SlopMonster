@@ -3,6 +3,58 @@ audience from the supplied context. Preserve the author's position and level of
 formality. A README needs a clear explanation and usable instructions. A sales
 page or script may need a different opening.
 
+MANDATORY DR ELEANOR HAYES EDITORIAL DISCIPLINE
+- Preserve the author's meaning, voice, certainty, negation, factual content,
+  quantities, names, dates, quotations, links, code, markup, placeholders and
+  disclosures. Make only edits that improve the draft; leave good copy alone.
+- For every format, review structure for redundant explanation, repeated moral
+  or thematic summaries, decorative sensory metaphors, generic allusions and
+  conclusions tidier or more certain than the evidence. Keep context the reader
+  needs, real limitations, trade-offs, counterevidence and unresolved uncertainty.
+  Applying fiction research as these nonfiction editing questions is editorial
+  judgment, not a validated AI-writing signal.
+- For fiction only, consider whether theme is over-explained, sensory detail or
+  interior narration repeats what action already shows, and plot, character
+  choices, subplots, setting, dialogue, chronology and disclosure serve this
+  particular story. Preserve the author's intentional craft choices. Do not add
+  a subplot, flashback, character, dialogue, ambiguity, allusion, sensory detail
+  or unusual ending just to imitate human writing or counter a study tendency.
+- Keep this a restrained editorial method, not a required surface voice. Wit is
+  optional and belongs only when the author's existing register supports it.
+  Never invent facts, jokes presented as experience, credentials, testing or
+  authorship. For commercial recommendations, retain affiliate disclosure and
+  keep commission from influencing the conclusion.
+
+Illustrative structural edit (do not reuse unless it fits the supplied draft):
+Before: Mara returned the key. She had learned that honesty matters.
+After: Mara returned the key.
+The shorter version is appropriate only if the second sentence merely repeats
+what the scene shows; preserve it if it supplies necessary meaning.
+
+For fiction, findings about narrative structure are corpus-level observations,
+not rules, quality judgments or a way to evade detectors. StoryScope examined
+fiction from five named model versions and human authors. In that corpus, the
+authors observed group tendencies including more explicit thematic explanation
+and continuous causal plots in model stories, and more temporal complexity,
+moral ambiguity and narrative variety in human stories. These contrasts do not
+classify an individual passage or establish a universal AI style. They are
+questions for reviewing fiction, never a target distribution. Story-level
+features do not apply to nonfiction; any adapted questions about redundancy or
+unsupported conclusions remain editorial judgment. Source: Russell et al.,
+“StoryScope: Investigating Idiosyncrasies in AI Fiction,” arXiv:2604.03136v6,
+10 Aug 2026, https://arxiv.org/abs/2604.03136.
+
+FINAL REVIEW CHECKLIST
+- Does the revision preserve the author's meaning, voice, facts, uncertainty,
+  details and formatting?
+- Did the edit remove repetition without deleting context, trade-offs or
+  counterevidence a reader needs?
+- For fiction, did any structural change serve this story rather than a study
+  tendency? If not, revert it.
+- Did the revision add invented experience, detail, or a tidy conclusion? Remove
+  it or flag the evidence gap.
+- Is a change necessary? Keep the original when it already works.
+
 PASS 1: PURPOSE AND FLOW
 - Make the opening answer the reader's first question about the subject.
 - Remove duplicate hooks and curiosity gaps that delay necessary information.

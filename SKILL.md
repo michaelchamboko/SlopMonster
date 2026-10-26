@@ -5,7 +5,9 @@ description: Review writing for its intended reader, check common AI writing pat
 
 # SlopMonster
 
-Edit the supplied draft for its audience and purpose. The workflow supports
+Edit the supplied draft for its audience and purpose. Every edit uses the
+mandatory Dr Eleanor Hayes editorial discipline described in
+[references/dr-eleanor-hayes.md](references/dr-eleanor-hayes.md). The workflow supports
 READMEs, landing pages, emails and scripts. Use the checker to locate known
 patterns, then review the writing in context. A score of 5/5 means no scored
 patterns matched; it does not establish that the copy is clear or accurate.
@@ -48,7 +50,11 @@ Work through the draft in this order:
 2. **Meaning and evidence.** Check that each sentence adds information and follows
    from what came before. Explain conditions on claims. Remove empty contrasts,
    repeated metaphors and comparisons that do not help the reader. Preserve
-   facts, technical behavior and the author's position.
+   facts, technical behavior and the author's position. In every format, look for
+   repeated explanations, thematic or moral summaries, decorative sensory detail
+   and conclusions tidier or more certain than the evidence. Keep useful context,
+   trade-offs, counterevidence and uncertainty. Applying these questions beyond
+   fiction is editorial judgment, not a tested AI-writing signal.
 3. **Wording and rhythm.** Review the checker findings and replace vague language
    with direct wording. Read adjacent sentences together for repetitive shapes.
    Let sentence length follow the thought. Keep useful lists and punctuation.
@@ -57,13 +63,17 @@ Do not manufacture personality by adding an opinion, a mistake, a fragment or a
 fixed quota of short sentences. Do not add a number to every claim. Use only facts
 supplied by the author or verified from an appropriate source.
 
+For fiction, read [references/storyscope-findings.md](references/storyscope-findings.md)
+alongside the persona guide. Use its source-linked observations as review questions,
+not as a target, score or authorship test. Preserve the author's deliberate choices.
+
 The checker can flag valid language. Review the actual match before editing it.
 Never hide ordinary prose in code formatting to raise the score. If a necessary
 phrase still triggers a rule, explain the remaining finding to the user.
 
-## Optional editorial persona: Dr Eleanor Hayes
+## Mandatory editorial discipline: Dr Eleanor Hayes
 
-When the user specifically asks for Dr Eleanor Hayes or Eleanor's editorial voice, read [references/dr-eleanor-hayes.md](references/dr-eleanor-hayes.md) and apply it as a **style pass after meaning and evidence checks**. For evidence-led SaaS content, preserve conditional recommendations, source-bound claims, limitations, disclosures and practical buyer context. Never present her fictional background as actual testing credentials or authorship. Do not automatically apply this persona to unrelated documents.
+Read [references/dr-eleanor-hayes.md](references/dr-eleanor-hayes.md) for the required structure and fidelity review. This is an editorial method, not a mandatory surface voice: preserve the author's register and use wit only when it already fits. Apply the paper's narrative structure observations only to fiction. Do not add narrative elements to imitate human writing. For commercial recommendations, preserve conditions, source-bound claims, buyer context and affiliate disclosure; commission must not influence a conclusion. Never present the persona's fictional background as actual testing credentials or authorship.
 
 ## Step 3: Request a second editing pass
 
@@ -77,8 +87,9 @@ accepting them.
 | GPT / Codex / ChatGPT | `DESLOP_WRITER=gpt tools/cleanse.sh draft.md > cleansed.md` |
 | Gemini | Use either command to select an installed rival CLI. |
 
-The script uses the selected CLI's configured model and
-[prompts/cleanse.txt](prompts/cleanse.txt). The CLI must be installed and
+The script uses the selected CLI's configured model and the self-contained,
+mandatory editorial instructions in [prompts/cleanse.txt](prompts/cleanse.txt).
+The CLI must be installed and
 authenticated. If it is unavailable, use the prompt and draft in the other model
 family's chat. If a second model cannot be accessed, report that the pass was not
 completed and continue the editorial review and local checks.

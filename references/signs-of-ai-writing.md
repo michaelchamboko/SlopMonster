@@ -6,7 +6,11 @@ This catalogue lists patterns to review while editing. It draws on Wikipedia's
 
 The five groups correspond to the checker's scoring categories, but some advice
 requires editorial judgment and has no regex check. Read the findings in context.
-The complete automated rules are in `tools/deslop.py`.
+The complete automated rules are in `tools/deslop.py`. All editing also uses the
+Dr Eleanor Hayes discipline in [dr-eleanor-hayes.md](dr-eleanor-hayes.md).
+StoryScope's fiction research and examples are summarized in
+[storyscope-findings.md](storyscope-findings.md); they are editorial questions,
+not additional scoring rules or authorship tests.
 
 ---
 

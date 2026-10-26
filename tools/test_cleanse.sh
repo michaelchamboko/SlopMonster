@@ -57,4 +57,53 @@ rm -f "$tmp"
 out="$(printf 'We use the `%s` marker.\nStill copy.\n' "$NOTES_SENTINEL" | emit_copy 2>/dev/null)"
 case "$out" in *'Still copy.'*) check 'sentinel inside a line is not a split point' 0;; *) check 'sentinel inside a line is not a split point' 1;; esac
 
+# ── the standalone prompt reaches both rival CLIs ─────────────────────────
+# The skill file is not sent by cleanse.sh. Capture its actual CLI argument so
+# this guards the self-contained prompt used by both Codex and Claude routes.
+tmpdir="$(mktemp -d)"
+trap 'rm -rf "$tmpdir"' EXIT
+mkdir -p "$tmpdir/bin"
+cat >"$tmpdir/bin/codex" <<'MOCK'
+#!/usr/bin/env bash
+printf '%s\n' "${!#}" > "$CAPTURE_FILE"
+printf 'codex\nEdited copy.\n\n<<<SLOPMONSTER-NOTES>>>\n- reviewed\ntokens used\n'
+MOCK
+cat >"$tmpdir/bin/claude" <<'MOCK'
+#!/usr/bin/env bash
+printf '%s\n' "${!#}" > "$CAPTURE_FILE"
+printf 'Edited copy.\n\n<<<SLOPMONSTER-NOTES>>>\n- reviewed\n'
+MOCK
+chmod +x "$tmpdir/bin/codex" "$tmpdir/bin/claude"
+printf 'Draft text.\n' >"$tmpdir/draft.md"
+
+if CAPTURE_FILE="$tmpdir/codex-prompt" PATH="$tmpdir/bin:/usr/bin:/bin" \
+    DESLOP_WRITER=claude bash "$HERE/cleanse.sh" "$tmpdir/draft.md" >/dev/null 2>/dev/null; then
+  check 'Codex route exits successfully' 0
+else
+  check 'Codex route exits successfully' 1
+fi
+if CAPTURE_FILE="$tmpdir/claude-prompt" PATH="$tmpdir/bin:/usr/bin:/bin" \
+    DESLOP_WRITER=gpt bash "$HERE/cleanse.sh" "$tmpdir/draft.md" >/dev/null 2>/dev/null; then
+  check 'Claude route exits successfully' 0
+else
+  check 'Claude route exits successfully' 1
+fi
+
+has_mandatory_prompt() {
+  grep -Fq 'MANDATORY DR ELEANOR HAYES EDITORIAL DISCIPLINE' "$1" \
+    && grep -Fq 'For every format, review structure' "$1" \
+    && grep -Fq 'For fiction only, consider whether theme is over-explained' "$1" \
+    && grep -Fq 'not a validated AI-writing signal' "$1"
+}
+
+for route in codex claude; do
+  prompt="$tmpdir/$route-prompt"
+  if [ -f "$prompt" ] && has_mandatory_prompt "$prompt" \
+      && grep -Fq 'Draft text.' "$prompt"; then
+    check "$route receives mandatory editorial rules and draft" 0
+  else
+    check "$route receives mandatory editorial rules and draft" 1
+  fi
+done
+
 [ "$fail" = "0" ] && echo "all cleanse tests passed" || { echo "cleanse tests FAILED"; exit 1; }
